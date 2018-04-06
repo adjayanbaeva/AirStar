@@ -1,6 +1,15 @@
-# MyProject
+# Airstar
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+
+## Description
+This web application will help users to lease or rent short-term lodging.
+
+## Specifictions
+* Users can view list of homes available for rent;
+* Users can click and view details about selected home;
+* Users can create a form and post information about their home to lease;
+
 
 ## Development server
 
