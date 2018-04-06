@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import { Home } from '../home.model';
 
 @Component({
   selector: 'app-home-detail',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-detail.component.css']
 })
 export class HomeDetailComponent implements OnInit {
+  homeId: number = null;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+      this.placeId = parseInt(urlParameters['id']);
+    });
   }
 
 }
