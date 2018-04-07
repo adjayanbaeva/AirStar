@@ -11,4 +11,12 @@ export class HomeService {
     return HOMES;
   }
 
+  getHomeById(homeId: number){
+    for (var i = 0; i <= HOMES.length - 1; i++) {
+      if (HOMES[i].id === homeId) {
+        return HOMES[i];
+      }
+
+}
+}
 }

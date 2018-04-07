@@ -7,7 +7,8 @@ import { HomeService } from '../home.service';
 @Component({
   selector: 'app-home-detail',
   templateUrl: './home-detail.component.html',
-  styleUrls: ['./home-detail.component.css']
+  styleUrls: ['./home-detail.component.css'],
+  providers: [HomeService]
 })
 export class HomeDetailComponent implements OnInit {
   homeId: number = null;
