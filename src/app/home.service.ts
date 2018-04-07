@@ -19,7 +19,8 @@ export class HomeService {
     this.homes.push(newHome);
   }
 
-  getHomeById(homeId: number){
+  getHomeById(homeId: string){
+    return this.database.object('homes/' + homeId);
 
 
 }

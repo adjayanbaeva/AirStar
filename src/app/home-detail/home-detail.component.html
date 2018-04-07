@@ -1,10 +1,10 @@
-<div>
-  <h3>{{homeToDisplay.imageUrl}}</h3>
-  <h4>{{homeToDisplay.name}}</h4>
-  <p>{{homeToDisplay.address}}</p>
-  <p>{{homeToDisplay.description}}</p>
-  <p>{{homeToDisplay.amenities}}</p>
-  <p>{{homeToDisplay.rules}}</p>
-  <p>{{homeToDisplay.cancellation}}</p>
+<div class=container>
+  <h3>{{(homeToDisplay | async)?.imageUrl}}</h3>
+  <h4>{{(homeToDisplay | async)?.name}}</h4>
+  <p>{{(homeToDisplay | async)?.address}}</p>
+  <p>{{(homeToDisplay | async)?.description}}</p>
+  <p>{{(homeToDisplay | async)?.amenities}}</p>
+  <p>{{(homeToDisplay | async)?.rules}}</p>
+  <p>{{(homeToDisplay | async)?.cancellation}}</p>
 
 </div>

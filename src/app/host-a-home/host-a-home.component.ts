@@ -1,6 +1,7 @@
-import { Component} from '@angular/core';
-import { Home } from '../home.model';
+import { Component, OnInit} from '@angular/core';
 import { HomeService } from '../home.service';
+import { Home } from '../home.model';
+
 
 @Component({
   selector: 'app-host-a-home',
@@ -10,7 +11,7 @@ import { HomeService } from '../home.service';
 })
 export class HostAHomeComponent implements OnInit {
 
-  constructor(private albumService: HomeService) { }
+  constructor(private homeService: HomeService) { }
 
   ngOnInit() {
   }

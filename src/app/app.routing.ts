@@ -17,6 +17,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'homes/:id',
+    component: HomeDetailComponent
   },
   {
     path: 'host-a-home',
