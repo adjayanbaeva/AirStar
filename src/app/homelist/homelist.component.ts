@@ -1,18 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { Home } from '../home.model';
 import { Router } from '@angular/router';
+import { HomeService } from '../home.service';
 
 @Component({
   selector: 'app-homelist',
   templateUrl: './homelist.component.html',
-  styleUrls: ['./homelist.component.css']
+  styleUrls: ['./homelist.component.css'],
+  providers: [HomeService]
 })
-export class HomelistComponent {
+export class HomelistComponent implements OnInit {
   homes: Home[];
+
+  constructor(private router: Router, private homeService: HomeService) {}
   //  = [
   //   new Home ("img", "Apartment", "1432 Downtown Seattle", "Beautiful apartment, within walking distance of parks, bars, museums and downtown.", "Kitchen, Wifi, Washer", "no smoking, no parties or events", "Cancel up to 5 days before check in and get a full refund . Cancel within 5 days of your trip" ),
   //   new Home ("img", "Studio", "64829 Capitol Hill, Seattle", "Beautiful studio, within walking distance of parks, bars, museums and downtown.", "Kitchen, Wifi, Washer", "no pets", "Cancel up to 2 days before check in and get a full refund . Cancel within 5 days of your trip")
   // ];
+
+  ngOnInit(){
+    this.homes = this.homeService.getHomes();
+
+  }
 
   goToDetailPage(clickedHome: Home) {
      this.router.navigate(['homes', clickedHome.id]);
