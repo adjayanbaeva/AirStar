@@ -35,4 +35,9 @@ export class HomeService {
                                 });
     }
 
+    deleteHome(localHomeToDelete){
+    var homeEntryInFirebase = this.getHomeById(localHomeToDelete.$key);
+    homeEntryInFirebase.remove();
+  }
+
 }

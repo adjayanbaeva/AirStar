@@ -21,4 +21,10 @@ export class EditHomeComponent implements OnInit {
     this.homeService.updateHome(homeToUpdate);
   }
 
+  beginDeletingHome(homeToDelete){
+    if(confirm("Are you sure you want to delete this item from the inventory?")){
+      this.homeService.deleteHome(homeToDelete);
+    }
+  }
+
 }
