@@ -11,7 +11,8 @@ import { HomeService } from '../home.service';
   providers: [HomeService]
 })
 export class HomeDetailComponent implements OnInit {
-  homeId: number = null;
+  homeId: number;
+  homeToDisplay: Home;
 
   constructor(private route: ActivatedRoute, private location: Location, private homeService: HomeService) { }
 
@@ -19,6 +20,7 @@ export class HomeDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.placeId = parseInt(urlParameters['id']);
     });
+    this.homeToDisplay = this.homeService.getHomeById(this.homeId);
   }
 
 }
