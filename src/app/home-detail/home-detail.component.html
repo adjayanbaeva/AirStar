@@ -1,5 +1,5 @@
 <div class=container>
-  <h3>{{(homeToDisplay | async)?.imageUrl}}</h3>
+  <h3><a href="{{(placeToDisplay | async)?.imageUrl}}"><img width="500" src="{{(placeToDisplay | async)?.imageUrl}}"></a></h3>
   <h4>{{(homeToDisplay | async)?.name}}</h4>
   <p>{{(homeToDisplay | async)?.address}}</p>
   <p>{{(homeToDisplay | async)?.description}}</p>

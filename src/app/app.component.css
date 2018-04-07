@@ -1,0 +1,13 @@
+.base {
+  background-color: beige;
+  background-size: cover;
+  /* background-image: url("vacation.jpg"); */
+
+}
+ p {
+   font-family: monospace;
+   font-style: italic;
+ }
+h1, h2, a {
+  font-family: monospace;
+}

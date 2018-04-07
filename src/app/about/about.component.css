@@ -1,0 +1,10 @@
+h1, a, p {
+  font-family: inherit;
+  color: #5D3C36;
+}
+
+h2 {
+  font-family: inherit;
+  color: #5D3C36;
+  text-align: center;
+}
