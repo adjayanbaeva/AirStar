@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Home } from '../home.model';
 import { Router } from '@angular/router';
 import { HomeService } from '../home.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-homelist',
@@ -10,6 +11,7 @@ import { HomeService } from '../home.service';
   providers: [HomeService]
 })
 export class HomelistComponent implements OnInit {
+  albums: FirebaseListObservable<any[]>;
   homes: Home[];
 
   constructor(private router: Router, private homeService: HomeService) {}
@@ -24,7 +26,7 @@ export class HomelistComponent implements OnInit {
   }
 
   goToDetailPage(clickedHome: Home) {
-     this.router.navigate(['homes', clickedHome.id]);
+
    };
 }
 

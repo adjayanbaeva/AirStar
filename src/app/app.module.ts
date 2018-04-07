@@ -10,6 +10,7 @@ import { HomeDetailComponent } from './home-detail/home-detail.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { HostAHomeComponent } from './host-a-home/host-a-home.component';
 
 
 export const firebaseConfig = {
@@ -25,7 +26,8 @@ export const firebaseConfig = {
     AppComponent,
     AboutComponent,
     HomelistComponent,
-    HomeDetailComponent
+    HomeDetailComponent,
+    HostAHomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+ <div class="panel-heading">
+    <h3>Create your listing</h3>
+ </div>
+  <p>It’s free and easy to create a listing on Airstar. Describe your space, how many guests you can accommodate, and add photos and details.</p>
+
+  <div>
+    <div>
+      <label>Home Image:</label>
+      <br>
+      <input #newImg>
+    </div>
+
+    <div>
+      <label>What kind of place do you have :</label>
+      <br>
+      <input #newName>
+    </div>
+
+    <div>
+      <label>Location of the home:</label>
+      <br>
+      <textarea #newAddress></textarea>
+    </div>
+
+    <div>
+      <label>Home Description:</label>
+      <br>
+      <textarea #newDescription></textarea>
+    </div>
+
+    <div>
+      <label>Home Amenities:</label>
+      <br>
+      <textarea #newAmenities></textarea>
+    </div>
+
+    <div>
+      <label>Rules:</label>
+      <br>
+      <textarea #newRules></textarea>
+    </div>
+
+    <div>
+      <label>Cancellation Terms:</label>
+      <br>
+      <textarea #newCancellation></textarea>
+    </div>
+    <button (click)="submitForm(newImg.value, newName.value, newAddress.value, newDescription.value, newAmenities.value, newRules.value, newCancellation.value); newImg.value=''; newName.value=''; newAddress.value=''; newDescription.value=''; newAmenities.value=''; newRules.value=''; newCancellation.value=''">Add</button>
+  </div>
+</div>
