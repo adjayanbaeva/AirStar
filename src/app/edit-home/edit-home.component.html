@@ -1,0 +1,29 @@
+<h4>Edit Home</h4>
+
+<label>New Home Title:</label>
+<input [(ngModel)]="selectedHome.imageUrl">
+<br>
+
+<label>New Home Artist:</label>
+<input [(ngModel)]="selectedHome.name">
+<br>
+
+<label>New Home Description:</label>
+<input [(ngModel)]="selectedHome.address">
+
+<label>New Home Description:</label>
+<input [(ngModel)]="selectedHome.description">
+
+
+<label>New Home Description:</label>
+<input [(ngModel)]="selectedHome.amenities">
+
+
+<label>New Home Description:</label>
+<input [(ngModel)]="selectedHome.rules">
+
+
+<label>New Home Description:</label>
+<input [(ngModel)]="selectedHome.cancellation">
+
+<button (click)="beginUpdatingHome(selectedHome)">Update</button>

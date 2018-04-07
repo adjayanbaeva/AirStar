@@ -20,8 +20,19 @@ export class HomeService {
   }
 
   getHomeById(homeId: string){
-    return this.database.object('homes/' + homeId);
-
-
+    return this.database.object('/homes/' + homeId);
 }
+
+  updateHome(localUpdatedHome){
+      var homeEntryInFirebase = this.getHomeById(localUpdatedHome.$key);
+      homeEntryInFirebase.update({imageUrl: localUpdatedHome.imageUrl,
+                                  name: localUpdatedHome.name,
+                                  address: localUpdatedHome.address,
+                                  description: localUpdatedHome.description,
+                                  amenities: localUpdatedHome.amenities,
+                                  rules: localUpdatedHome.rules,
+                                  cancellation: localUpdatedHome.cancellation,
+                                });
+    }
+
 }

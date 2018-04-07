@@ -1,7 +1,13 @@
 <h2>Homes Around the World</h2>
 
-<div *ngFor="let home of homes | async"> (click)="goToDetailPage(home)" class="panel panel-default">
+<div *ngFor="let home of homes | async" class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{home.imageUrl}}</em>  {{home.name}}</h3>
-</div>
+    <h3 (click)="goToDetailPage(home)"><em>{{home.imageUrl}}</em>  {{home.name}}</h3>
+    <div *ngIf="currentRoute === '/host-a-home'">
+      <p>{{home.description}}</p>
+      <hr>
+      <app-edit-home [selectedHome]="home"></app-edit-home>
+    </div>
+
+   </div>
 </div>
