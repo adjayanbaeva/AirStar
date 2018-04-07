@@ -1,0 +1,20 @@
+{"homes": [{
+  "imageUrl": "img",
+  "name": "Apartment",
+  "address": "1432 Downtown Seattle",
+  "description": "Beautiful apartment, within walking distance of parks, bars, museums and downtown.",
+  "amenities": "Kitchen, Wifi, Washer",
+  "rules":  "no smoking, no parties or events",
+  "cancellation": "Cancel up to 5 days before check in and get a full refund . Cancel within 5 days of your trip"
+  }, {
+  "imageUrl": "img",
+  "name": "Studio",
+  "address": "64829 Capitol Hill, Seattle",
+  "description": "Beautiful studio, within walking distance of parks, bars, museums and downtown.",
+  "amenities": "Kitchen, Wifi, Washer",
+  "rules":  "no pets",
+  "cancellation": "Cancel up to 2 days before check in and get a full refund . Cancel within 5 days of your trip"
+
+    }]
+
+}
